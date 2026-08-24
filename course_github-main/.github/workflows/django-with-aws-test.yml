@@ -1,0 +1,40 @@
+# main 브랜치에 push/PR이 발생할 때마다 Django 테스트를 자동으로 실행하는 워크플로우
+# "Github Actions/Django with aws" 폴더가 변경될 때만 실행되도록 paths로 범위를 제한
+name: Test (Django with aws)
+
+on:
+  # main 브랜치에 직접 push 되었을 때 실행
+  push:
+    branches: ["main"]
+    paths: ["Github Actions/Django with aws/**"]
+  # main 브랜치로 향하는 PR이 열리거나 갱신될 때 실행
+  pull_request:
+    branches: ["main"]
+    paths: ["Github Actions/Django with aws/**"]
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+
+    # 이후 모든 run 스텝을 django_server 폴더 기준으로 실행
+    defaults:
+      run:
+        working-directory: Github Actions/Django with aws/django_server
+
+    steps:
+      - name: 저장소 코드 체크아웃
+        uses: actions/checkout@v4
+
+      # uv 패키지 매니저 설치 (의존성 캐시 활성화로 다음 실행부터 속도 향상)
+      - name: uv 설치
+        uses: astral-sh/setup-uv@v3
+        with:
+          enable-cache: true
+
+      # uv.lock에 고정된 버전 그대로 의존성 설치 (--frozen: 로컬과 동일한 환경 보장)
+      - name: 의존성 설치
+        run: uv sync --frozen
+
+      # manage.py test로 user/todolist 앱의 테스트 코드 실행 (--verbosity 2: 테스트별 이름과 결과를 로그에 출력)
+      - name: Django 테스트 실행
+        run: uv run python manage.py test --verbosity 2

@@ -1,0 +1,24 @@
+version: "3"
+services:
+  db:
+    # Docker Hub의 공식 MySQL 이미지를 사용합니다.
+    image: mysql
+    # 컨테이너가 종료되면 자동으로 다시 시작합니다.
+    restart: always
+    command:
+      # MySQL 서버의 기본 문자셋을 한글 저장에 적합한 utf8mb4로 설정합니다.
+      - --character-set-server=utf8mb4
+      - --collation-server=utf8mb4_unicode_ci
+    volumes:
+      # 로컬 database 폴더에 MySQL 데이터를 저장해 컨테이너를 재생성해도 데이터가 남습니다.
+      - ./database:/var/lib/mysql
+    environment:
+      # 수업용 비밀번호입니다. 실제 운영 환경에서는 더 강한 비밀번호와 별도 보안 설정을 사용합니다.
+      MYSQL_ROOT_PASSWORD: "root1234"
+      # 컨테이너가 처음 실행될 때 자동으로 만들 기본 데이터베이스와 사용자입니다.
+      MYSQL_DATABASE: "examplesdb"
+      MYSQL_USER: "urstory"
+      MYSQL_PASSWORD: "u1234"
+    ports:
+      # 내 PC의 3306 포트를 컨테이너의 MySQL 3306 포트와 연결합니다.
+      - "3306:3306"
