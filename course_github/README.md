@@ -1,4 +1,4 @@
-  # course_github
+# course_github
 
 ---
 ## 참고 유튜브 

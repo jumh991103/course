@@ -1,16 +1,16 @@
 # main 브랜치에 push/PR이 발생할 때마다 Django 테스트를 자동으로 실행하는 워크플로우
-# "Github Actions/Django with aws" 폴더가 변경될 때만 실행되도록 paths로 범위를 제한
+# "5. Github Actions/Django with aws" 폴더가 변경될 때만 실행되도록 paths로 범위를 제한
 name: Test (Django with aws)
 
 on:
   # main 브랜치에 직접 push 되었을 때 실행
   push:
     branches: ["main"]
-    paths: ["Github Actions/Django with aws/**"]
+    paths: ["5. Github Actions/Django with aws/**"]
   # main 브랜치로 향하는 PR이 열리거나 갱신될 때 실행
   pull_request:
     branches: ["main"]
-    paths: ["Github Actions/Django with aws/**"]
+    paths: ["5. Github Actions/Django with aws/**"]
 
 jobs:
   test:
@@ -19,7 +19,7 @@ jobs:
     # 이후 모든 run 스텝을 django_server 폴더 기준으로 실행
     defaults:
       run:
-        working-directory: Github Actions/Django with aws/django_server
+        working-directory: 5. Github Actions/Django with aws/django_server
 
     steps:
       - name: 저장소 코드 체크아웃
