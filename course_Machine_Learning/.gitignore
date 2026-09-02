@@ -1,0 +1,5 @@
+cache
+catboost_info
+.venv/
+.venv-pycaret/
+__pycache__/

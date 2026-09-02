@@ -1,0 +1,12 @@
+[project]
+name = "1-basic-ml"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "easydict>=1.13",
+    "jupyter>=1.1.1",
+    "pandas>=3.0.3",
+    "scikit-learn==1.4.2",
+]
