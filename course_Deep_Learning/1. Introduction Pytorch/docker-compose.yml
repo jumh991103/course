@@ -1,0 +1,39 @@
+version: "3.9"
+
+services:
+  dev-container:
+    container_name: my-container
+    build:
+      context: .            # Dockerfile이 있는 현재 디렉토리
+      dockerfile: Dockerfile # 명시적으로 Dockerfile 지정 (생략 가능)
+    restart: unless-stopped
+    tty: true
+    stdin_open: true
+
+    # 포트 매핑
+    ports:
+      - "2222:22"     # SSH 접속
+      - "8888:8888"   # Jupyter Notebook
+      - "6006:6006"   # Tensorboard
+
+    # 볼륨 마운트
+    volumes:
+      - ./jupyter:/workspace
+      - ./data:/workspace/data
+
+    # 환경 변수
+    environment:
+      - TZ=Asia/Seoul
+      - PYTHONUNBUFFERED=1  # 로그 실시간 출력
+
+    # 초기 실행 명령어 (예: SSH 설치, Python 설치 등)
+    # command: /bin/bash
+    # 컨테이너 실행 시 JupyterLab 자동 실행
+    command: >
+      jupyter-lab
+      --ip=0.0.0.0
+      --port=8888
+      --no-browser
+      --allow-root
+      --ServerApp.token=''
+      --ServerApp.password=''

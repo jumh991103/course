@@ -1,0 +1,26 @@
+[project]
+name = "introduction-pytorch"
+version = "0.1.0"
+description = "PyTorch introduction course environment"
+requires-python = ">=3.10,<3.11"
+dependencies = [
+    "easydict==1.13",
+    "ipywidgets==8.1.7",
+    "jupyter==1.1.1",
+    "jupyterlab==4.4.7",
+    "numpy==1.26.4",
+    "pandas==2.2.2",
+    "ray[tune]",
+    "scikit-learn==1.7.2",
+    "seaborn==0.13.2",
+    "spacy==3.7.5",
+    "tensorboard==2.20.0",
+    "torch==2.0.1",
+    "torchinfo==1.8.0",
+    "torchvision",
+    "torchmetrics",
+    "tqdm==4.67.1",
+]
+
+[tool.uv]
+package = false

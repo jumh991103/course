@@ -1,0 +1,26 @@
+# NLP 라이브러리
+nltk==3.9.1
+spacy==3.7.5
+
+# PyTorch 및 Torchtext
+torch==2.0.1
+torchtext==0.15.2
+torchinfo==1.8.0
+
+# 데이터 처리
+pandas==2.2.2
+
+jupyter==1.1.1
+jupyterlab==4.4.7
+
+seaborn==0.13.2
+tqdm==4.67.1
+ipywidgets==8.1.7
+easydict==1.13
+scikit-learn==1.7.2
+ray[tune]
+tensorboard==2.20.0
+
+# 형태소 분석기 
+kiwipiepy==0.21.0
+
