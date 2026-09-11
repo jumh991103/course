@@ -32,7 +32,8 @@ ENV VIRTUAL_ENV=${UV_PROJECT_ENVIRONMENT}
 ENV PATH="${VIRTUAL_ENV}/bin:${PATH}"
 
 COPY pyproject.toml uv.lock /workspace/
-RUN uv sync --locked --no-dev --no-cache
+#RUN uv sync --locked --no-dev --no-cache
+RUN uv sync
 
 # 6. 컨테이너 실행 시 JupyterLab 실행
 CMD ["jupyter-lab", "--ip=0.0.0.0", "--port=8888", "--no-browser", "--allow-root"]
