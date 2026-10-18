@@ -1,0 +1,22 @@
+# 개발 패키지
+streamlit                   # 웹 애플리케이션 패키지 
+python-dotenv==1.1.1        # 환경 변수 관리
+
+# 모델별 패키지
+langchain-openai==1.0.1     # OpenAI 모델 통합
+
+# LangChain 패키지
+langchain==1.0.2 # LangChain 메인 패키지
+langchain-core==1.0.0 # LangChain 코어 기능
+langchain-community==0.4 # LangChain 커뮤니티 확장
+langgraph==1.0.1
+langgraph-cli[inmem]==0.4.21
+langsmith==0.4.40
+
+# Tools 패키지
+langchain-tavily==0.2.12 #  AI가 웹 검색을 할 수 있게 해주는 도구
+
+# SQLite 관련 패키지
+langgraph-checkpoint-sqlite==3.0.0  # LangGraph SQLite 체크포인터 - 대화 상태를 SQLite DB에 저장/복원
+aiosqlite==0.21.0                 # 비동기 SQLite 라이브러리 - SQLite를 비동기로 사용할 수 있게 해주는 도구
+

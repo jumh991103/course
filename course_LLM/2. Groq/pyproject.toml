@@ -1,0 +1,12 @@
+[project]
+name = "groq-intro"
+version = "0.1.0"
+description = "Groq API introductory lecture materials"
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "groq>=0.31.0",
+    "jupyter>=1.1.1",
+    "python-dotenv==1.1.0",
+    "tiktoken>=0.12.0",
+]

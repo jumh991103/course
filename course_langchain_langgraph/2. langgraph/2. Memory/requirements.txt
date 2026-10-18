@@ -1,0 +1,31 @@
+# 개발 패키지
+jupyter==1.1.1 # 주피터 노트북
+python-dotenv==1.1.1 # 환경 변수 관리
+pandas==2.3.3       # 데이터 분석 패키지
+
+# LangChain 패키지
+langchain==1.0.2 # LangChain 메인 패키지
+langchain-core==1.0.0 # LangChain 코어 기능
+langchain-community==0.4 # LangChain 커뮤니티 확장
+langsmith==0.4.38 # LangSmith 프로젝트 로그 관리
+langchain-experimental==0.0.42 # 새로운 기능을 미리 사용해볼 수 있는 패키지
+langgraph==1.0.1
+
+# 모델별 패키지
+langchain-groq==1.0.0 # Groq 모델 통합
+langchain-ollama==1.0.0 # Ollama 모델 통합
+
+# Tools 패키지
+langchain-tavily==0.2.12 #  AI가 웹 검색을 할 수 있게 해주는 도구
+
+# 암호화 패키지
+pycryptodome==3.23.0              # 암호화 라이브러리 - 데이터를 안전하게 암호화/복호화하는 도구 (AES 등)
+
+# SQLite 관련 패키지
+langgraph-checkpoint-sqlite==3.0.0  # LangGraph SQLite 체크포인터 - 대화 상태를 SQLite DB에 저장/복원
+aiosqlite==0.21.0                 # 비동기 SQLite 라이브러리 - SQLite를 비동기로 사용할 수 있게 해주는 도구
+
+# PostgreSQL 관련 패키지
+psycopg[binary]==3.2.3            # PostgreSQL 데이터베이스 연결 라이브러리 (psycopg 버전 3 - langgraph용)
+langgraph-checkpoint-postgres==3.0.0  # LangGraph PostgreSQL 체크포인터 - 대화 상태를 PostgreSQL DB에 저장/복원
+
