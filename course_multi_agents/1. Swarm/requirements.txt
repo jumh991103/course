@@ -1,0 +1,16 @@
+# 개발 패키지
+jupyter==1.1.1 # 주피터 노트북
+python-dotenv==1.2.2 # 환경 변수 관리
+
+# LangChain 패키지
+langchain==1.2.15
+langsmith==0.7.37
+langgraph==1.1.9 
+langgraph-swarm==0.1.0 
+
+# 모델별 패키지
+langchain-openai==1.2.1
+langchain-ollama==1.1.0
+
+# Tools 패키지
+langchain-tavily==0.2.18

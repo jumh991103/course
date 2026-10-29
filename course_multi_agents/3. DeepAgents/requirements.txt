@@ -1,0 +1,25 @@
+# 개발 패키지
+jupyter==1.1.1
+python-dotenv==1.2.1
+pandas==2.3.3
+
+# LangChain 패키지
+langchain==1.2.15
+langsmith==0.7.37
+langgraph==1.1.9
+deepagents==0.5.3
+
+# 모델별 패키지
+langchain-openai==1.1.1
+
+# Tools 패키지
+langchain-tavily==0.2.13
+
+# PostgreSQL 패키지
+psycopg[binary]==3.3.2
+langgraph-checkpoint-postgres==3.0.2
+
+# Redis 패키지 
+redis==7.1.0
+langgraph-checkpoint-redis==0.3.1
+redisvl==0.13.2

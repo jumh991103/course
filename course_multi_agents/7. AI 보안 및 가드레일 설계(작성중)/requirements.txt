@@ -1,0 +1,9 @@
+# 개발 패키지
+jupyter==1.1.1
+python-dotenv==1.1.1
+
+# LangGraph 실습
+langgraph==1.0.1
+
+# 메시지 스키마 검증
+pydantic==2.12.4
