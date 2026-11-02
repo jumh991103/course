@@ -1,0 +1,5 @@
+runpod==1.8.2 # serverless
+ollama==0.6.1 # ollama
+
+
+

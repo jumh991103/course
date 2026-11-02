@@ -1,0 +1,7 @@
+{
+    "input": {
+        "model": "gemma3:4b",
+        "system": "You are a helpful assistant.",
+        "prompt": "Hey there! 한글로 짧게 인사해줘."
+    }
+}
