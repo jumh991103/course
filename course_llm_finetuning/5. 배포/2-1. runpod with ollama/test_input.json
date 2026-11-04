@@ -1,0 +1,7 @@
+{
+    "input": {
+        "model": "unsloth-gemma3-1b-finetune-nutrition_q4km:1b",
+        "system": "You are a helpful assistant.",
+        "prompt": "Hey there! 한글로 짧게 인사해줘."
+    }
+}
