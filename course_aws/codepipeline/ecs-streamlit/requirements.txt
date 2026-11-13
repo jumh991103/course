@@ -1,0 +1,8 @@
+boto3 # aws 
+streamlit # web
+openai==1.55.3 # chatGPT
+
+
+
+
+

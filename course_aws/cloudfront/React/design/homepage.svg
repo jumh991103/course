@@ -1,0 +1,343 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 1480" font-family="'Malgun Gothic','Segoe UI',sans-serif">
+  <title>노트북마켓 - 홈페이지 화면설계 와이어프레임</title>
+
+  <defs>
+    <linearGradient id="heroGrad" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#4f46e5"/>
+      <stop offset="1" stop-color="#7c3aed"/>
+    </linearGradient>
+    <linearGradient id="btnGrad" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#4f46e5"/>
+      <stop offset="1" stop-color="#7c3aed"/>
+    </linearGradient>
+    <linearGradient id="imgGrad" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#eef2ff"/>
+      <stop offset="1" stop-color="#f5f3ff"/>
+    </linearGradient>
+    <filter id="cardShadow" x="-30%" y="-30%" width="160%" height="160%">
+      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#0f172a" flood-opacity="0.10"/>
+    </filter>
+    <filter id="panelShadow" x="-30%" y="-30%" width="160%" height="160%">
+      <feDropShadow dx="0" dy="6" stdDeviation="16" flood-color="#0f172a" flood-opacity="0.12"/>
+    </filter>
+  </defs>
+
+  <!-- 배경 -->
+  <rect x="0" y="0" width="1440" height="1480" fill="#f1f5f9"/>
+
+  <!-- ===================== 히어로 / 로고 / 검색 ===================== -->
+  <rect x="0" y="0" width="1440" height="200" fill="url(#heroGrad)"/>
+  <circle cx="1300" cy="20" r="140" fill="#ffffff" opacity="0.06"/>
+  <circle cx="140" cy="190" r="100" fill="#ffffff" opacity="0.05"/>
+
+  <rect x="40" y="32" width="40" height="26" rx="4" fill="#ffffff" opacity="0.15" stroke="#ffffff" stroke-width="2.5"/>
+  <circle cx="60" cy="45" r="2.5" fill="#ffffff"/>
+  <rect x="32" y="60" width="56" height="6" rx="3" fill="#ffffff"/>
+  <text x="96" y="54" font-size="26" font-weight="800" fill="#ffffff">노트북마켓</text>
+  <text x="96" y="74" font-size="12" fill="#ffffff" opacity="0.85">최신 노트북, 한눈에 비교하고 최저가로 구매하세요</text>
+
+  <rect x="340" y="112" width="760" height="52" rx="26" fill="#ffffff" filter="url(#panelShadow)"/>
+  <text x="372" y="144" font-size="14" fill="#94a3b8">찾으시는 노트북 모델명을 입력해보세요</text>
+  <rect x="990" y="118" width="90" height="40" rx="20" fill="url(#btnGrad)"/>
+  <text x="1035" y="143" font-size="14" font-weight="700" fill="#ffffff" text-anchor="middle">검색</text>
+
+  <!-- ===================== 탭 (전체 / 회사명) ===================== -->
+  <rect x="0" y="200" width="1440" height="56" fill="#ffffff"/>
+
+  <rect x="40" y="210" width="62" height="36" rx="18" fill="url(#btnGrad)"/>
+  <text x="71" y="233" font-size="14" font-weight="700" fill="#ffffff" text-anchor="middle">전체</text>
+
+  <text x="154" y="233" font-size="14" font-weight="600" fill="#475569" text-anchor="middle">LG전자</text>
+  <text x="236" y="233" font-size="14" font-weight="600" fill="#475569" text-anchor="middle">MSI</text>
+  <text x="303" y="233" font-size="14" font-weight="600" fill="#475569" text-anchor="middle">HP</text>
+  <text x="379" y="233" font-size="14" font-weight="600" fill="#475569" text-anchor="middle">레노버</text>
+  <text x="469" y="233" font-size="14" font-weight="600" fill="#475569" text-anchor="middle">에이서</text>
+  <text x="554" y="233" font-size="14" font-weight="600" fill="#475569" text-anchor="middle">ASUS</text>
+  <text x="646" y="233" font-size="14" font-weight="600" fill="#475569" text-anchor="middle">삼성전자</text>
+
+  <!-- ===================== 조회 조건 패널 (금액 / 인치 / 무게 / CPU / 그래픽) ===================== -->
+  <rect x="40" y="280" width="1360" height="88" rx="16" fill="#ffffff" filter="url(#panelShadow)"/>
+
+  <text x="64" y="296" font-size="11" fill="#64748b">금액</text>
+  <rect x="64" y="302" width="222" height="44" rx="10" fill="#f8fafc" stroke="#e2e8f0"/>
+  <text x="80" y="329" font-size="14" fill="#334155">전체 가격</text>
+  <polygon points="258,314 270,314 264,322" fill="#94a3b8"/>
+
+  <text x="302" y="296" font-size="11" fill="#64748b">인치</text>
+  <rect x="302" y="302" width="222" height="44" rx="10" fill="#f8fafc" stroke="#e2e8f0"/>
+  <text x="318" y="329" font-size="14" fill="#334155">전체 사이즈</text>
+  <polygon points="496,314 508,314 502,322" fill="#94a3b8"/>
+
+  <text x="540" y="296" font-size="11" fill="#64748b">무게</text>
+  <rect x="540" y="302" width="222" height="44" rx="10" fill="#f8fafc" stroke="#e2e8f0"/>
+  <text x="556" y="329" font-size="14" fill="#334155">전체 무게</text>
+  <polygon points="734,314 746,314 740,322" fill="#94a3b8"/>
+
+  <text x="778" y="296" font-size="11" fill="#64748b">CPU</text>
+  <rect x="778" y="302" width="222" height="44" rx="10" fill="#f8fafc" stroke="#e2e8f0"/>
+  <text x="794" y="329" font-size="14" fill="#334155">전체 CPU</text>
+  <polygon points="972,314 984,314 978,322" fill="#94a3b8"/>
+
+  <text x="1016" y="296" font-size="11" fill="#64748b">그래픽</text>
+  <rect x="1016" y="302" width="222" height="44" rx="10" fill="#f8fafc" stroke="#e2e8f0"/>
+  <text x="1032" y="329" font-size="14" fill="#334155">전체 그래픽</text>
+  <polygon points="1210,314 1222,314 1216,322" fill="#94a3b8"/>
+
+  <rect x="1254" y="302" width="122" height="44" rx="10" fill="url(#btnGrad)"/>
+  <text x="1315" y="329" font-size="14" font-weight="700" fill="#ffffff" text-anchor="middle">검색하기</text>
+
+  <!-- ===================== 결과 요약 / 정렬 ===================== -->
+  <text x="40" y="406" font-size="14" fill="#64748b">전체 상품 <tspan font-weight="700" fill="#1e293b">128건</tspan></text>
+  <text x="1400" y="406" font-size="14" fill="#64748b" text-anchor="end">인기순 ▾</text>
+
+  <!-- ===================== 상품 카드 그리드 ===================== -->
+  <!-- 카드 1 : LG전자 그램 프로16 (인기) -->
+  <g>
+    <rect x="40" y="430" width="322" height="420" rx="16" fill="#ffffff" filter="url(#cardShadow)"/>
+    <rect x="56" y="446" width="290" height="170" rx="12" fill="url(#imgGrad)"/>
+    <rect x="171" y="511" width="60" height="38" rx="5" fill="none" stroke="#c7d2fe" stroke-width="3"/>
+    <rect x="163" y="551" width="76" height="7" rx="3.5" fill="#c7d2fe"/>
+    <text x="201" y="577" font-size="11" fill="#a5b4fc" text-anchor="middle">상품 이미지</text>
+    <rect x="64" y="454" width="48" height="22" rx="4" fill="#f97316"/>
+    <text x="88" y="469" font-size="11" font-weight="700" fill="#ffffff" text-anchor="middle">인기</text>
+    <circle cx="318" cy="474" r="16" fill="#ffffff" opacity="0.95"/>
+    <text x="318" y="480" font-size="15" fill="#94a3b8" text-anchor="middle">♡</text>
+    <rect x="56" y="628" width="76" height="24" rx="12" fill="#eef2ff"/>
+    <text x="94" y="644" font-size="12" font-weight="600" fill="#4f46e5" text-anchor="middle">LG전자</text>
+    <text x="56" y="680" font-size="15" font-weight="600" fill="#1e293b">LG전자 2026 그램 프로16</text>
+    <text x="56" y="700" font-size="15" font-weight="600" fill="#1e293b">16Z95U-GS5WK</text>
+    <text x="56" y="723" font-size="13" fill="#f59e0b">★★★★☆</text>
+    <text x="126" y="723" font-size="12" fill="#94a3b8">4.8 (312)</text>
+    <text x="56" y="756" font-size="22" font-weight="800" fill="#ea580c">2,134,480원</text>
+    <rect x="56" y="770" width="66" height="24" rx="6" fill="#f8fafc" stroke="#e2e8f0"/>
+    <text x="89" y="786" font-size="11" fill="#475569" text-anchor="middle">16인치</text>
+    <rect x="130" y="770" width="66" height="24" rx="6" fill="#f8fafc" stroke="#e2e8f0"/>
+    <text x="163" y="786" font-size="11" fill="#475569" text-anchor="middle">1.199kg</text>
+    <rect x="204" y="770" width="66" height="24" rx="6" fill="#f8fafc" stroke="#e2e8f0"/>
+    <text x="237" y="786" font-size="10.5" fill="#475569" text-anchor="middle">라이젠AI5</text>
+    <rect x="278" y="770" width="66" height="24" rx="6" fill="#f8fafc" stroke="#e2e8f0"/>
+    <text x="311" y="786" font-size="10.5" fill="#475569" text-anchor="middle">Radeon840M</text>
+    <rect x="56" y="802" width="290" height="32" rx="10" fill="url(#btnGrad)"/>
+    <text x="201" y="823" font-size="13" font-weight="700" fill="#ffffff" text-anchor="middle">상세보기</text>
+  </g>
+
+  <!-- 카드 2 : LG전자 그램 프로16 (상위모델, 찜함) -->
+  <g>
+    <rect x="386" y="430" width="322" height="420" rx="16" fill="#ffffff" filter="url(#cardShadow)"/>
+    <rect x="402" y="446" width="290" height="170" rx="12" fill="url(#imgGrad)"/>
+    <rect x="517" y="511" width="60" height="38" rx="5" fill="none" stroke="#c7d2fe" stroke-width="3"/>
+    <rect x="509" y="551" width="76" height="7" rx="3.5" fill="#c7d2fe"/>
+    <text x="547" y="577" font-size="11" fill="#a5b4fc" text-anchor="middle">상품 이미지</text>
+    <circle cx="664" cy="474" r="16" fill="#ffffff" opacity="0.95"/>
+    <text x="664" y="480" font-size="15" fill="#ef4444" text-anchor="middle">♥</text>
+    <rect x="402" y="628" width="76" height="24" rx="12" fill="#eef2ff"/>
+    <text x="440" y="644" font-size="12" font-weight="600" fill="#4f46e5" text-anchor="middle">LG전자</text>
+    <text x="402" y="680" font-size="15" font-weight="600" fill="#1e293b">LG전자 2026 그램 프로16</text>
+    <text x="402" y="700" font-size="15" font-weight="600" fill="#1e293b">16Z90U-KU7WK</text>
+    <text x="402" y="723" font-size="13" fill="#f59e0b">★★★★★</text>
+    <text x="472" y="723" font-size="12" fill="#94a3b8">4.9 (204)</text>
+    <text x="402" y="756" font-size="22" font-weight="800" fill="#ea580c">3,290,000원</text>
+    <rect x="402" y="770" width="66" height="24" rx="6" fill="#f8fafc" stroke="#e2e8f0"/>
+    <text x="435" y="786" font-size="11" fill="#475569" text-anchor="middle">16인치</text>
+    <rect x="476" y="770" width="66" height="24" rx="6" fill="#f8fafc" stroke="#e2e8f0"/>
+    <text x="509" y="786" font-size="11" fill="#475569" text-anchor="middle">1.19kg</text>
+    <rect x="550" y="770" width="66" height="24" rx="6" fill="#f8fafc" stroke="#e2e8f0"/>
+    <text x="583" y="786" font-size="10.5" fill="#475569" text-anchor="middle">울트라X7</text>
+    <rect x="624" y="770" width="66" height="24" rx="6" fill="#f8fafc" stroke="#e2e8f0"/>
+    <text x="657" y="786" font-size="10.5" fill="#475569" text-anchor="middle">ArcB390</text>
+    <rect x="402" y="802" width="290" height="32" rx="10" fill="url(#btnGrad)"/>
+    <text x="547" y="823" font-size="13" font-weight="700" fill="#ffffff" text-anchor="middle">상세보기</text>
+  </g>
+
+  <!-- 카드 3 : MSI 벡터 A16 (NEW) -->
+  <g>
+    <rect x="732" y="430" width="322" height="420" rx="16" fill="#ffffff" filter="url(#cardShadow)"/>
+    <rect x="748" y="446" width="290" height="170" rx="12" fill="url(#imgGrad)"/>
+    <rect x="863" y="511" width="60" height="38" rx="5" fill="none" stroke="#c7d2fe" stroke-width="3"/>
+    <rect x="855" y="551" width="76" height="7" rx="3.5" fill="#c7d2fe"/>
+    <text x="893" y="577" font-size="11" fill="#a5b4fc" text-anchor="middle">상품 이미지</text>
+    <rect x="756" y="454" width="48" height="22" rx="4" fill="#6366f1"/>
+    <text x="780" y="469" font-size="11" font-weight="700" fill="#ffffff" text-anchor="middle">NEW</text>
+    <circle cx="1010" cy="474" r="16" fill="#ffffff" opacity="0.95"/>
+    <text x="1010" y="480" font-size="15" fill="#94a3b8" text-anchor="middle">♡</text>
+    <rect x="748" y="628" width="76" height="24" rx="12" fill="#eef2ff"/>
+    <text x="786" y="644" font-size="12" font-weight="600" fill="#4f46e5" text-anchor="middle">MSI</text>
+    <text x="748" y="680" font-size="15" font-weight="600" fill="#1e293b">MSI 벡터 A16 HX</text>
+    <text x="748" y="700" font-size="15" font-weight="600" fill="#1e293b">A8WHG-R9 QHD+</text>
+    <text x="748" y="723" font-size="13" fill="#f59e0b">★★★★☆</text>
+    <text x="818" y="723" font-size="12" fill="#94a3b8">4.7 (98)</text>
+    <text x="748" y="756" font-size="22" font-weight="800" fill="#ea580c">2,799,000원</text>
+    <rect x="748" y="770" width="66" height="24" rx="6" fill="#f8fafc" stroke="#e2e8f0"/>
+    <text x="781" y="786" font-size="11" fill="#475569" text-anchor="middle">16인치</text>
+    <rect x="822" y="770" width="66" height="24" rx="6" fill="#f8fafc" stroke="#e2e8f0"/>
+    <text x="855" y="786" font-size="11" fill="#475569" text-anchor="middle">2.7kg</text>
+    <rect x="896" y="770" width="66" height="24" rx="6" fill="#f8fafc" stroke="#e2e8f0"/>
+    <text x="929" y="786" font-size="10.5" fill="#475569" text-anchor="middle">라이젠9</text>
+    <rect x="970" y="770" width="66" height="24" rx="6" fill="#f8fafc" stroke="#e2e8f0"/>
+    <text x="1003" y="786" font-size="10.5" fill="#475569" text-anchor="middle">RTX5070Ti</text>
+    <rect x="748" y="802" width="290" height="32" rx="10" fill="url(#btnGrad)"/>
+    <text x="893" y="823" font-size="13" font-weight="700" fill="#ffffff" text-anchor="middle">상세보기</text>
+  </g>
+
+  <!-- 카드 4 : HP 옴니북 3 -->
+  <g>
+    <rect x="1078" y="430" width="322" height="420" rx="16" fill="#ffffff" filter="url(#cardShadow)"/>
+    <rect x="1094" y="446" width="290" height="170" rx="12" fill="url(#imgGrad)"/>
+    <rect x="1209" y="511" width="60" height="38" rx="5" fill="none" stroke="#c7d2fe" stroke-width="3"/>
+    <rect x="1201" y="551" width="76" height="7" rx="3.5" fill="#c7d2fe"/>
+    <text x="1239" y="577" font-size="11" fill="#a5b4fc" text-anchor="middle">상품 이미지</text>
+    <circle cx="1356" cy="474" r="16" fill="#ffffff" opacity="0.95"/>
+    <text x="1356" y="480" font-size="15" fill="#94a3b8" text-anchor="middle">♡</text>
+    <rect x="1094" y="628" width="76" height="24" rx="12" fill="#eef2ff"/>
+    <text x="1132" y="644" font-size="12" font-weight="600" fill="#4f46e5" text-anchor="middle">HP</text>
+    <text x="1094" y="680" font-size="15" font-weight="600" fill="#1e293b">HP 옴니북 3</text>
+    <text x="1094" y="700" font-size="15" font-weight="600" fill="#1e293b">16-bu0022TU</text>
+    <text x="1094" y="723" font-size="13" fill="#f59e0b">★★★★☆</text>
+    <text x="1164" y="723" font-size="12" fill="#94a3b8">4.5 (67)</text>
+    <text x="1094" y="756" font-size="22" font-weight="800" fill="#ea580c">1,247,000원</text>
+    <rect x="1094" y="770" width="66" height="24" rx="6" fill="#f8fafc" stroke="#e2e8f0"/>
+    <text x="1127" y="786" font-size="11" fill="#475569" text-anchor="middle">16인치</text>
+    <rect x="1168" y="770" width="66" height="24" rx="6" fill="#f8fafc" stroke="#e2e8f0"/>
+    <text x="1201" y="786" font-size="11" fill="#475569" text-anchor="middle">1.64kg</text>
+    <rect x="1242" y="770" width="66" height="24" rx="6" fill="#f8fafc" stroke="#e2e8f0"/>
+    <text x="1275" y="786" font-size="10.5" fill="#475569" text-anchor="middle">코어5</text>
+    <rect x="1316" y="770" width="66" height="24" rx="6" fill="#f8fafc" stroke="#e2e8f0"/>
+    <text x="1349" y="786" font-size="10.5" fill="#475569" text-anchor="middle">IntelGx</text>
+    <rect x="1094" y="802" width="290" height="32" rx="10" fill="url(#btnGrad)"/>
+    <text x="1239" y="823" font-size="13" font-weight="700" fill="#ffffff" text-anchor="middle">상세보기</text>
+  </g>
+
+  <!-- 카드 5 : 레노버 아이디어패드 Slim5 (찜함) -->
+  <g>
+    <rect x="40" y="878" width="322" height="420" rx="16" fill="#ffffff" filter="url(#cardShadow)"/>
+    <rect x="56" y="894" width="290" height="170" rx="12" fill="url(#imgGrad)"/>
+    <rect x="171" y="959" width="60" height="38" rx="5" fill="none" stroke="#c7d2fe" stroke-width="3"/>
+    <rect x="163" y="999" width="76" height="7" rx="3.5" fill="#c7d2fe"/>
+    <text x="201" y="1025" font-size="11" fill="#a5b4fc" text-anchor="middle">상품 이미지</text>
+    <circle cx="318" cy="922" r="16" fill="#ffffff" opacity="0.95"/>
+    <text x="318" y="928" font-size="15" fill="#ef4444" text-anchor="middle">♥</text>
+    <rect x="56" y="1076" width="76" height="24" rx="12" fill="#eef2ff"/>
+    <text x="94" y="1092" font-size="12" font-weight="600" fill="#4f46e5" text-anchor="middle">레노버</text>
+    <text x="56" y="1128" font-size="15" font-weight="600" fill="#1e293b">레노버 아이디어패드</text>
+    <text x="56" y="1148" font-size="15" font-weight="600" fill="#1e293b">Slim5 16AGP11</text>
+    <text x="56" y="1171" font-size="13" fill="#f59e0b">★★★★☆</text>
+    <text x="126" y="1171" font-size="12" fill="#94a3b8">4.6 (153)</text>
+    <text x="56" y="1204" font-size="22" font-weight="800" fill="#ea580c">1,990,000원</text>
+    <rect x="56" y="1218" width="66" height="24" rx="6" fill="#f8fafc" stroke="#e2e8f0"/>
+    <text x="89" y="1234" font-size="11" fill="#475569" text-anchor="middle">16인치</text>
+    <rect x="130" y="1218" width="66" height="24" rx="6" fill="#f8fafc" stroke="#e2e8f0"/>
+    <text x="163" y="1234" font-size="11" fill="#475569" text-anchor="middle">1.69kg</text>
+    <rect x="204" y="1218" width="66" height="24" rx="6" fill="#f8fafc" stroke="#e2e8f0"/>
+    <text x="237" y="1234" font-size="10.5" fill="#475569" text-anchor="middle">라이젠AI7</text>
+    <rect x="278" y="1218" width="66" height="24" rx="6" fill="#f8fafc" stroke="#e2e8f0"/>
+    <text x="311" y="1234" font-size="10.5" fill="#475569" text-anchor="middle">Radeon860M</text>
+    <rect x="56" y="1250" width="290" height="32" rx="10" fill="url(#btnGrad)"/>
+    <text x="201" y="1271" font-size="13" font-weight="700" fill="#ffffff" text-anchor="middle">상세보기</text>
+  </g>
+
+  <!-- 카드 6 : HP 15-fd2130TU -->
+  <g>
+    <rect x="386" y="878" width="322" height="420" rx="16" fill="#ffffff" filter="url(#cardShadow)"/>
+    <rect x="402" y="894" width="290" height="170" rx="12" fill="url(#imgGrad)"/>
+    <rect x="517" y="959" width="60" height="38" rx="5" fill="none" stroke="#c7d2fe" stroke-width="3"/>
+    <rect x="509" y="999" width="76" height="7" rx="3.5" fill="#c7d2fe"/>
+    <text x="547" y="1025" font-size="11" fill="#a5b4fc" text-anchor="middle">상품 이미지</text>
+    <circle cx="664" cy="922" r="16" fill="#ffffff" opacity="0.95"/>
+    <text x="664" y="928" font-size="15" fill="#94a3b8" text-anchor="middle">♡</text>
+    <rect x="402" y="1076" width="76" height="24" rx="12" fill="#eef2ff"/>
+    <text x="440" y="1092" font-size="12" font-weight="600" fill="#4f46e5" text-anchor="middle">HP</text>
+    <text x="402" y="1128" font-size="15" font-weight="600" fill="#1e293b">HP 15-fd2130TU</text>
+    <text x="402" y="1171" font-size="13" fill="#f59e0b">★★★★☆</text>
+    <text x="472" y="1171" font-size="12" fill="#94a3b8">4.4 (45)</text>
+    <text x="402" y="1204" font-size="22" font-weight="800" fill="#ea580c">1,148,000원</text>
+    <rect x="402" y="1218" width="66" height="24" rx="6" fill="#f8fafc" stroke="#e2e8f0"/>
+    <text x="435" y="1234" font-size="11" fill="#475569" text-anchor="middle">15.6인치</text>
+    <rect x="476" y="1218" width="66" height="24" rx="6" fill="#f8fafc" stroke="#e2e8f0"/>
+    <text x="509" y="1234" font-size="11" fill="#475569" text-anchor="middle">1.65kg</text>
+    <rect x="550" y="1218" width="66" height="24" rx="6" fill="#f8fafc" stroke="#e2e8f0"/>
+    <text x="583" y="1234" font-size="10.5" fill="#475569" text-anchor="middle">울트라5</text>
+    <rect x="624" y="1218" width="66" height="24" rx="6" fill="#f8fafc" stroke="#e2e8f0"/>
+    <text x="657" y="1234" font-size="10.5" fill="#475569" text-anchor="middle">IntelGx</text>
+    <rect x="402" y="1250" width="290" height="32" rx="10" fill="url(#btnGrad)"/>
+    <text x="547" y="1271" font-size="13" font-weight="700" fill="#ffffff" text-anchor="middle">상세보기</text>
+  </g>
+
+  <!-- 카드 7 : 에이서 프레데터 헬리오스 네오16 (인기) -->
+  <g>
+    <rect x="732" y="878" width="322" height="420" rx="16" fill="#ffffff" filter="url(#cardShadow)"/>
+    <rect x="748" y="894" width="290" height="170" rx="12" fill="url(#imgGrad)"/>
+    <rect x="863" y="959" width="60" height="38" rx="5" fill="none" stroke="#c7d2fe" stroke-width="3"/>
+    <rect x="855" y="999" width="76" height="7" rx="3.5" fill="#c7d2fe"/>
+    <text x="893" y="1025" font-size="11" fill="#a5b4fc" text-anchor="middle">상품 이미지</text>
+    <rect x="756" y="902" width="48" height="22" rx="4" fill="#f97316"/>
+    <text x="780" y="917" font-size="11" font-weight="700" fill="#ffffff" text-anchor="middle">인기</text>
+    <circle cx="1010" cy="922" r="16" fill="#ffffff" opacity="0.95"/>
+    <text x="1010" y="928" font-size="15" fill="#94a3b8" text-anchor="middle">♡</text>
+    <rect x="748" y="1076" width="76" height="24" rx="12" fill="#eef2ff"/>
+    <text x="786" y="1092" font-size="12" font-weight="600" fill="#4f46e5" text-anchor="middle">에이서</text>
+    <text x="748" y="1128" font-size="15" font-weight="600" fill="#1e293b">에이서 프레데터</text>
+    <text x="748" y="1148" font-size="15" font-weight="600" fill="#1e293b">헬리오스 네오16</text>
+    <text x="748" y="1171" font-size="13" fill="#f59e0b">★★★★☆</text>
+    <text x="818" y="1171" font-size="12" fill="#94a3b8">4.7 (88)</text>
+    <text x="748" y="1204" font-size="22" font-weight="800" fill="#ea580c">3,253,000원</text>
+    <rect x="748" y="1218" width="66" height="24" rx="6" fill="#f8fafc" stroke="#e2e8f0"/>
+    <text x="781" y="1234" font-size="11" fill="#475569" text-anchor="middle">16인치</text>
+    <rect x="822" y="1218" width="66" height="24" rx="6" fill="#f8fafc" stroke="#e2e8f0"/>
+    <text x="855" y="1234" font-size="11" fill="#475569" text-anchor="middle">2.45kg</text>
+    <rect x="896" y="1218" width="66" height="24" rx="6" fill="#f8fafc" stroke="#e2e8f0"/>
+    <text x="929" y="1234" font-size="10.5" fill="#475569" text-anchor="middle">울트라9</text>
+    <rect x="970" y="1218" width="66" height="24" rx="6" fill="#f8fafc" stroke="#e2e8f0"/>
+    <text x="1003" y="1234" font-size="10.5" fill="#475569" text-anchor="middle">RTX5070Ti</text>
+    <rect x="748" y="1250" width="290" height="32" rx="10" fill="url(#btnGrad)"/>
+    <text x="893" y="1271" font-size="13" font-weight="700" fill="#ffffff" text-anchor="middle">상세보기</text>
+  </g>
+
+  <!-- 카드 8 : ASUS 비보북 16 -->
+  <g>
+    <rect x="1078" y="878" width="322" height="420" rx="16" fill="#ffffff" filter="url(#cardShadow)"/>
+    <rect x="1094" y="894" width="290" height="170" rx="12" fill="url(#imgGrad)"/>
+    <rect x="1209" y="959" width="60" height="38" rx="5" fill="none" stroke="#c7d2fe" stroke-width="3"/>
+    <rect x="1201" y="999" width="76" height="7" rx="3.5" fill="#c7d2fe"/>
+    <text x="1239" y="1025" font-size="11" fill="#a5b4fc" text-anchor="middle">상품 이미지</text>
+    <circle cx="1356" cy="922" r="16" fill="#ffffff" opacity="0.95"/>
+    <text x="1356" y="928" font-size="15" fill="#94a3b8" text-anchor="middle">♡</text>
+    <rect x="1094" y="1076" width="76" height="24" rx="12" fill="#eef2ff"/>
+    <text x="1132" y="1092" font-size="12" font-weight="600" fill="#4f46e5" text-anchor="middle">ASUS</text>
+    <text x="1094" y="1128" font-size="15" font-weight="600" fill="#1e293b">ASUS 비보북 16</text>
+    <text x="1094" y="1148" font-size="15" font-weight="600" fill="#1e293b">M1605YA-R7525</text>
+    <text x="1094" y="1171" font-size="13" fill="#f59e0b">★★★★☆</text>
+    <text x="1164" y="1171" font-size="12" fill="#94a3b8">4.3 (52)</text>
+    <text x="1094" y="1204" font-size="22" font-weight="800" fill="#ea580c">806,050원</text>
+    <rect x="1094" y="1218" width="66" height="24" rx="6" fill="#f8fafc" stroke="#e2e8f0"/>
+    <text x="1127" y="1234" font-size="11" fill="#475569" text-anchor="middle">16인치</text>
+    <rect x="1168" y="1218" width="66" height="24" rx="6" fill="#f8fafc" stroke="#e2e8f0"/>
+    <text x="1201" y="1234" font-size="11" fill="#475569" text-anchor="middle">1.88kg</text>
+    <rect x="1242" y="1218" width="66" height="24" rx="6" fill="#f8fafc" stroke="#e2e8f0"/>
+    <text x="1275" y="1234" font-size="10.5" fill="#475569" text-anchor="middle">라이젠5</text>
+    <rect x="1316" y="1218" width="66" height="24" rx="6" fill="#f8fafc" stroke="#e2e8f0"/>
+    <text x="1349" y="1234" font-size="10.5" fill="#475569" text-anchor="middle">RadeonGx</text>
+    <rect x="1094" y="1250" width="290" height="32" rx="10" fill="url(#btnGrad)"/>
+    <text x="1239" y="1271" font-size="13" font-weight="700" fill="#ffffff" text-anchor="middle">상세보기</text>
+  </g>
+
+  <!-- ===================== 페이지네이션 ===================== -->
+  <circle cx="630" cy="1338" r="18" fill="#ffffff" stroke="#e2e8f0"/>
+  <text x="630" y="1343" font-size="14" fill="#64748b" text-anchor="middle">‹</text>
+  <circle cx="678" cy="1338" r="18" fill="url(#btnGrad)"/>
+  <text x="678" y="1343" font-size="13" font-weight="700" fill="#ffffff" text-anchor="middle">1</text>
+  <circle cx="726" cy="1338" r="18" fill="#ffffff" stroke="#e2e8f0"/>
+  <text x="726" y="1343" font-size="13" fill="#475569" text-anchor="middle">2</text>
+  <circle cx="774" cy="1338" r="18" fill="#ffffff" stroke="#e2e8f0"/>
+  <text x="774" y="1343" font-size="13" fill="#475569" text-anchor="middle">3</text>
+  <circle cx="822" cy="1338" r="18" fill="#ffffff" stroke="#e2e8f0"/>
+  <text x="822" y="1343" font-size="13" fill="#475569" text-anchor="middle">4</text>
+  <circle cx="870" cy="1338" r="18" fill="#ffffff" stroke="#e2e8f0"/>
+  <text x="870" y="1343" font-size="13" fill="#475569" text-anchor="middle">5</text>
+  <circle cx="918" cy="1338" r="18" fill="#ffffff" stroke="#e2e8f0"/>
+  <text x="918" y="1343" font-size="14" fill="#64748b" text-anchor="middle">›</text>
+
+  <!-- ===================== 푸터 ===================== -->
+  <rect x="0" y="1396" width="1440" height="60" fill="#0f172a"/>
+  <text x="720" y="1431" font-size="12" fill="#ffffff" opacity="0.7" text-anchor="middle">© 2026 노트북마켓 · 강의용 화면설계 와이어프레임</text>
+</svg>

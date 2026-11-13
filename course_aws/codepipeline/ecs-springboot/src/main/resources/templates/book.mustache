@@ -1,0 +1,228 @@
+{{> layout/header}}
+
+{{#book}}
+<!-- Error Message (if any) -->
+{{#error}}
+<div class="mb-8">
+    <div class="bg-amber-50 border border-amber-200 rounded-2xl p-4">
+        <div class="flex items-center space-x-3">
+            <div class="bg-amber-500 rounded-full p-2">
+                <span class="text-white text-lg">⚠️</span>
+            </div>
+            <div>
+                <p class="text-amber-800 font-medium">{{error}}</p>
+            </div>
+        </div>
+    </div>
+</div>
+{{/error}}
+
+<!-- Breadcrumb Navigation -->
+<nav class="flex items-center space-x-2 text-sm mb-8" aria-label="Breadcrumb">
+    <a href="/books" class="flex items-center space-x-1 text-blue-600 hover:text-blue-800 transition-colors">
+        <span>🏠</span>
+        <span>도서 목록</span>
+    </a>
+    <span class="text-gray-400">/</span>
+    <span class="text-gray-600">도서 상세 (#{{bookid}})</span>
+</nav>
+
+<!-- Main Content -->
+<div class="grid grid-cols-1 lg:grid-cols-3 gap-12">
+    <!-- Left Column - Book Cover & Quick Info -->
+    <div class="lg:col-span-1">
+        <div class="sticky top-28">
+            <!-- Book Cover -->
+            <div class="bg-gradient-to-br from-blue-500 via-purple-500 to-indigo-600 rounded-3xl p-8 mb-6 text-center shadow-2xl relative overflow-hidden">
+                <!-- Decorative Background -->
+                <div class="absolute inset-0 opacity-20">
+                    <div class="absolute top-0 left-0 w-24 h-24 bg-white rounded-full -translate-x-12 -translate-y-12"></div>
+                    <div class="absolute bottom-0 right-0 w-32 h-32 bg-white rounded-full translate-x-16 translate-y-16"></div>
+                </div>
+                
+                <!-- Book Icon -->
+                <div class="relative z-10">
+                    <div class="text-8xl mb-4 animate-float">📖</div>
+                    <div class="bg-white/20 backdrop-blur-sm rounded-2xl px-4 py-2 inline-block">
+                        <span class="text-white font-bold text-lg">#{{bookid}}</span>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Quick Actions -->
+            <div class="space-y-3">
+                <button class="w-full bg-gradient-to-r from-blue-500 to-purple-600 text-white py-4 px-6 rounded-2xl font-semibold hover:from-blue-600 hover:to-purple-700 transform hover:scale-105 transition-all duration-200 shadow-lg hover:shadow-xl">
+                    <div class="flex items-center justify-center space-x-2">
+                        <span class="text-xl">📖</span>
+                        <span>지금 대출하기</span>
+                    </div>
+                </button>
+                <button class="w-full bg-gray-100 text-gray-700 py-3 px-6 rounded-2xl font-medium hover:bg-gray-200 transition-colors">
+                    <div class="flex items-center justify-center space-x-2">
+                        <span>❤️</span>
+                        <span>위시리스트 추가</span>
+                    </div>
+                </button>
+                <button class="w-full bg-amber-100 text-amber-700 py-3 px-6 rounded-2xl font-medium hover:bg-amber-200 transition-colors">
+                    <div class="flex items-center justify-center space-x-2">
+                        <span>⭐</span>
+                        <span>리뷰 작성</span>
+                    </div>
+                </button>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Right Column - Detailed Information -->
+    <div class="lg:col-span-2 space-y-8">
+        <!-- Title Section -->
+        <div class="bg-white/80 backdrop-blur-lg rounded-3xl p-8 shadow-lg border border-blue-100">
+            <div class="mb-6">
+                <h1 class="text-4xl font-bold text-gray-900 mb-3 leading-tight">
+                    {{bookTitle}}
+                </h1>
+                <div class="flex items-center space-x-4 text-gray-600 mb-4">
+                    <div class="flex items-center space-x-2">
+                        <span class="text-blue-500">👤</span>
+                        <span class="font-medium">{{author}}</span>
+                    </div>
+                    <div class="flex items-center space-x-2">
+                        <span class="text-green-500">✅</span>
+                        <span>대출 가능</span>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Price Display -->
+            <div class="bg-gradient-to-r from-green-50 to-emerald-50 rounded-2xl p-6 border border-green-100">
+                <div class="flex items-center justify-between">
+                    <div>
+                        <p class="text-gray-600 text-sm">도서 정가</p>
+                        <p class="text-4xl font-bold text-green-600">₩{{price}}</p>
+                    </div>
+                    <div class="text-right">
+                        <div class="bg-green-100 text-green-700 px-4 py-2 rounded-lg text-sm font-medium">
+                            세금 포함
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- ISBN Information -->
+        <div class="bg-white/80 backdrop-blur-lg rounded-3xl p-8 shadow-lg border border-blue-100">
+            <h2 class="text-2xl font-bold text-gray-900 mb-6 flex items-center">
+                <span class="text-blue-500 mr-3">📋</span>
+                도서 식별 정보
+            </h2>
+            
+            {{#isbn}}
+            <div class="space-y-4">
+                <div class="bg-gradient-to-r from-blue-50 to-indigo-50 rounded-2xl p-6 border border-blue-100">
+                    <div class="flex items-center justify-between mb-4">
+                        <span class="text-gray-700 font-medium">ISBN 번호</span>
+                        <span class="bg-blue-100 text-blue-700 px-3 py-1 rounded-lg text-sm font-medium">인증됨</span>
+                    </div>
+                    <div class="font-mono text-lg bg-white rounded-lg px-4 py-3 border">
+                        978-89-{{bookid}}23-4567-8
+                    </div>
+                </div>
+                
+                <div class="bg-green-50 border border-green-200 rounded-2xl p-6">
+                    <div class="flex items-center space-x-3">
+                        <div class="bg-green-500 rounded-full p-2">
+                            <span class="text-white text-lg">✅</span>
+                        </div>
+                        <div>
+                            <h3 class="font-semibold text-green-800">ISBN 등록 완료</h3>
+                            <p class="text-green-600 text-sm">국제 표준 도서 번호가 정상적으로 등록되어 있습니다.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            {{/isbn}}
+            
+            {{^isbn}}
+            <div class="bg-amber-50 border border-amber-200 rounded-2xl p-6">
+                <div class="flex items-center space-x-3">
+                    <div class="bg-amber-500 rounded-full p-2">
+                        <span class="text-white text-lg">⚠️</span>
+                    </div>
+                    <div>
+                        <h3 class="font-semibold text-amber-800">ISBN 정보 없음</h3>
+                        <p class="text-amber-600 text-sm">아직 ISBN이 등록되지 않았습니다. 관리자에게 문의하세요.</p>
+                    </div>
+                </div>
+                <div class="mt-4">
+                    <button class="bg-amber-100 text-amber-700 px-4 py-2 rounded-lg text-sm hover:bg-amber-200 transition-colors">
+                        📞 문의하기
+                    </button>
+                </div>
+            </div>
+            {{/isbn}}
+        </div>
+        
+        <!-- Additional Information -->
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <!-- Service Features -->
+            <div class="bg-blue-50 rounded-2xl p-6 text-center border border-blue-100">
+                <div class="bg-blue-500 rounded-full w-12 h-12 flex items-center justify-center mx-auto mb-4">
+                    <span class="text-white text-xl">🚚</span>
+                </div>
+                <h3 class="font-semibold text-blue-900 mb-2">빠른 배송</h3>
+                <p class="text-blue-700 text-sm">당일 주문시 익일 배송</p>
+            </div>
+            
+            <div class="bg-green-50 rounded-2xl p-6 text-center border border-green-100">
+                <div class="bg-green-500 rounded-full w-12 h-12 flex items-center justify-center mx-auto mb-4">
+                    <span class="text-white text-xl">🔄</span>
+                </div>
+                <h3 class="font-semibold text-green-900 mb-2">교환/반품</h3>
+                <p class="text-green-700 text-sm">30일 무료 교환/반품</p>
+            </div>
+            
+            <div class="bg-purple-50 rounded-2xl p-6 text-center border border-purple-100">
+                <div class="bg-purple-500 rounded-full w-12 h-12 flex items-center justify-center mx-auto mb-4">
+                    <span class="text-white text-xl">⭐</span>
+                </div>
+                <h3 class="font-semibold text-purple-900 mb-2">베스트셀러</h3>
+                <p class="text-purple-700 text-sm">독자 추천 도서</p>
+            </div>
+        </div>
+        
+        <!-- Book Stats -->
+        <div class="bg-white/80 backdrop-blur-lg rounded-3xl p-8 shadow-lg border border-blue-100">
+            <h2 class="text-2xl font-bold text-gray-900 mb-6">도서 통계</h2>
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
+                <div class="text-center">
+                    <div class="text-2xl font-bold text-blue-600">4.{{bookid}}</div>
+                    <div class="text-sm text-gray-600">평균 평점</div>
+                    <div class="text-yellow-400 mt-1">⭐⭐⭐⭐⭐</div>
+                </div>
+                <div class="text-center">
+                    <div class="text-2xl font-bold text-green-600">{{price}}</div>
+                    <div class="text-sm text-gray-600">대출 횟수</div>
+                </div>
+                <div class="text-center">
+                    <div class="text-2xl font-bold text-purple-600">{{bookid}}9</div>
+                    <div class="text-sm text-gray-600">리뷰 수</div>
+                </div>
+                <div class="text-center">
+                    <div class="text-2xl font-bold text-indigo-600">9{{bookid}}%</div>
+                    <div class="text-sm text-gray-600">추천율</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Back Button -->
+<div class="mt-12 text-center">
+    <a href="/books" class="inline-flex items-center space-x-2 bg-gray-100 hover:bg-gray-200 text-gray-700 px-6 py-3 rounded-2xl font-medium transition-colors">
+        <span>←</span>
+        <span>도서 목록으로 돌아가기</span>
+    </a>
+</div>
+{{/book}}
+
+{{> layout/footer}}
