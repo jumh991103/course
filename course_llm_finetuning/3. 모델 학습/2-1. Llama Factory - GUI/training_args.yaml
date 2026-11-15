@@ -1,0 +1,49 @@
+# =====================================================================
+# LLaMA-Factory WebUI - GUI 설정 파일
+#
+# ⚠️ 이 파일은 GUI elem_id 형식으로 작성된 파일입니다.
+#    GUI 하단 [Argument 불러오기] 버튼으로 로드하면
+#    화면의 각 항목에 자동으로 값이 채워집니다.
+# =====================================================================
+
+# 모델 설정 (top 섹션)
+top.model_name: Qwen2.5-3B          # GUI 드롭다운 모델명 (Qwen2.5-3B 선택)
+top.model_path: Qwen/Qwen2.5-3B    # HuggingFace 모델 경로
+top.finetuning_type: lora
+top.template: qwen
+top.booster: flashattn2             # Flash Attention 2 활성화
+
+# 학습 설정 (train 섹션)
+train.training_stage: Supervised Fine-Tuning
+train.dataset_dir: data
+train.dataset:
+  - illnesses_dataset
+
+# 학습 하이퍼파라미터
+train.learning_rate: "5e-5"
+train.num_train_epochs: "3.0"
+train.max_grad_norm: "1.0"
+train.max_samples: "100000"
+train.compute_type: bf16
+
+# 배치 & 시퀀스
+train.cutoff_len: 1024
+train.batch_size: 2
+train.gradient_accumulation_steps: 8
+train.val_size: 0.1
+train.lr_scheduler_type: cosine
+
+# 추가 구성
+train.logging_steps: 10
+train.save_steps: 100
+train.warmup_steps: 0
+
+# LoRA 구성
+train.lora_rank: 16
+train.lora_alpha: 32
+train.lora_dropout: 0.05
+train.lora_target: ""
+train.use_dora: true
+
+# 출력 디렉토리 (saves/{model}/{finetuning_type}/ 아래 폴더명)
+train.output_dir: train_illnesses_dora

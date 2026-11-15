@@ -1,0 +1,39 @@
+# ==================================================
+# Core LLM Libraries
+# ==================================================
+transformers==4.57.3
+accelerate==1.12.0
+datasets==4.3.0
+sentencepiece==0.2.1
+protobuf==6.33.2
+scipy==1.16.3
+einops==0.8.1
+packaging==24.2
+safetensors==0.7.0
+python-dotenv==1.1.1
+
+# ==================================================
+# LUnsloth & Fine-tuning
+# ==================================================
+unsloth==2025.12.5
+unsloth-zoo==2025.12.4
+trl==0.24.0
+peft==0.18.0
+bitsandbytes==0.49.0
+xformers==0.0.33
+wandb==0.23.1 
+tensorboard==2.20.0 
+rich==14.2.0
+
+# ==================================================
+# Jupyter & UI
+# ==================================================
+tqdm==4.67.1
+ipykernel==6.29.5 
+jupyter-client==8.6.3
+jupyter==1.1.1 
+jupyterlab==4.5.1
+ipywidgets==8.1.8 
+widgetsnbextension==4.0.15
+nbformat==5.10.4
+

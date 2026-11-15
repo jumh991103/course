@@ -1,0 +1,10 @@
+{
+  "illnesses_dataset": {
+    "hf_hub_url": "good593/illnesses-dataset",
+    "split": "train",
+    "columns": {
+      "prompt": "user_input",
+      "response": "reference"
+    }
+  }
+}

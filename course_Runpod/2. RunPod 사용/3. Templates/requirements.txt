@@ -1,0 +1,12 @@
+# ==================================================
+# Jupyter & UI
+# ==================================================
+tqdm==4.67.1
+ipykernel==6.29.5 
+jupyter-client==8.6.3
+jupyter==1.1.1 
+jupyterlab==4.5.1
+ipywidgets==8.1.8 
+widgetsnbextension==4.0.15
+nbformat==5.10.4
+

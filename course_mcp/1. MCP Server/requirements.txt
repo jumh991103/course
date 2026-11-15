@@ -1,0 +1,4 @@
+# MCP Server 개발 강의 예제 (FastMCP)
+fastmcp==3.1.1
+mcp==1.26.0
+
